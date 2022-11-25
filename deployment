@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: vijay-app-ui
+  name: vijay-app-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vijay-app-ui
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: vijay-app-ui
+    spec:
+      containers:
+      - image: pemanjun/vijay-ui-app:appv3
+        name: vijay-ui-app
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
